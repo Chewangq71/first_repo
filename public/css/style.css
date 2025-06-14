@@ -17,14 +17,53 @@ background-size: cover;
 }
 .parent{
     background: rgba(141, 130, 130, 0.4) ;
-height: 80vh;
+height: 70vh;
 width: 40vw;
 border: 2px solid black;
 border-radius: 30px;
+box-shadow: 0 0 8px white,0 0 8px grey inset;
 margin: auto;
 margin-top: 100px;
 text-align: center;
 padding-top: 50px;
+animation-name: rotate;
+animation-duration: 3s;
+animation-timing-function: linear;
+animation-direction: alternate;
+}
+@keyframes rotate{
+ 
+   50%{
+    transform: rotate(0);
+    border-color: bisque;
+    box-shadow: 10 10 black;
+    scale: 1;
+   }
+   60%{
+    border-color: bisque;
+    box-shadow: 10 10 black;
+    scale: 1;
+   }
+   70%{
+    border-color: bisque;
+    box-shadow: 10 10 black;
+    scale: 1;
+   }
+   80%{
+    border-color: rgb(247, 219, 184);
+    box-shadow: 10 10 black;
+    scale: 1;
+   }
+    90%{
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+   100%{
+    transform: rotate(360deg);
+    border-color: rgb(216, 187, 152);
+    box-shadow: 10 10 black;
+    scale: 1;
+   }
 }
 
 
@@ -32,19 +71,20 @@ h1{
     font-size: 3rem;
     font-family: "Gill Sans", sans-serif;
     margin-bottom: 30px;
-    color: rgb(10, 10, 10);
+    color: rgb(255, 251, 251);
 
 }
 .parent.input-box{
-width: 100%;
+width: 90%;
 height: 10px;
 background: rgb(223, 222, 223);
 margin:30px 0;
 
+
 }
 
 .input-box input{
-    width: 100%;
+    width: 90%;
     height: 100%;
     background:rgba(246, 243, 243, 0.4) ;
     border: none;
@@ -52,12 +92,14 @@ margin:30px 0;
     border :2px solid rgb(0, 0, 0);
     border-radius: 40px;
     font-size: 20px;
-    color: rgb(232, 230, 230);
+    color: rgb(15, 14, 14);
 padding: 20px 50px 20px 20px;
+margin-bottom: 30px;
 }
 
 .input-box input::placeholder{
     color:black;
+   
 }
 
 .input-box i{
@@ -69,6 +111,7 @@ padding: 20px 50px 20px 20px;
 }
 
 
+
 .parent.div3{
 
     display: flex;
@@ -77,31 +120,51 @@ padding: 20px 50px 20px 20px;
     margin: -15px 0 15px;
    
 }
-.div3{
-    color:black;
-}
 
 
 
-
-button{
+.btn{
 
     height: 50px;
     width: 200px;
+    font-family:"Gill Sans", sans-serif ;
+    font-size: 2rem;
+    padding:auto;
+    border: 2px solid black;
+    background:rgba(26, 24, 24, 0.5);
+   color: white;
+   box-shadow: 0 0 8px white,0 0 8px grey inset;
+    border-radius: 25px;
+    transition: 150ms ease;
+}
+.btn:hover{
+    background:rgba(121, 111, 111, 0.5);
+    color: rgb(7, 7, 7);
+ 
+}
+.remo{
+    margin-bottom: 20px;
+
+.rem{
+   color:rgb(255, 255, 255);
+   font-size: large;
+   font-family: "Gill Sans", sans-serif,bold;
+   padding: 10px;
+   margin-right: 300px;
+}
+}
+a{
+    color:white;
+    font-size: large;
+    font-family: "Gill Sans", sans-serif,bold;
+
 }
 
-/* 
-.div1{
-    font-size: 1.5rem;
-    font-family: "Gill Sans", sans-serif;
-    margin-bottom: 30px;
-    padding: auto;
+.create{
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
 }
 
-.div2{
-  
-    font-size: 1.5rem;
-    font-family: "Gill Sans", sans-serif;
-    margin-bottom: 30px;
-    padding: auto;
-} */
+
+
