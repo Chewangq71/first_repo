@@ -18,10 +18,10 @@ app.get("/login", (req, res) => {
     
 });
 
-app.post('/login' , (req ,res)=>{
-  const {name , password} = req.body;
-  console.log(name , password);
-  console.log("HEllo")
+
+  app.get('/signup' , (req , res)=>{
+  res.render('create')
+  console.log("Create is getting loged")
 })
 
 app.listen(PORT, (err) => {
