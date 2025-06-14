@@ -16,12 +16,12 @@
 
 <form id="veer">
 <div class="input-box">
-<input type="text" placeholder="Username" required>
+<input type="text" name="nawa" placeholder="Username" required>
 
 </div>
 
 <div class="input-box">
-    <input type="password" placeholder="Password" required>
+    <input type="password" name="pwd" placeholder="Password" required>
    
     </div>
 
@@ -36,7 +36,7 @@
 </div>
 </form>
 
-
+<p id="hello">0</p>
 
 
 
@@ -48,18 +48,13 @@
 
     
 
- 
-    
-</body>
+ <script>
 
-
-<script>
-
-document.getElementById('submit').addEventListener('submit' , (e)=>{
+document.getElementById('veer').addEventListener('submit' , async(e)=>{
    e.preventDefault()
-})
-
-    try {
+   const name = e.target.nawa.value;
+   const pwd  = e.target.pwd.value;
+  
         const sumbit = async()=>{
         
         const transfer = await fetch("http://localhost:4000/login" , {
@@ -68,19 +63,24 @@ document.getElementById('submit').addEventListener('submit' , (e)=>{
                   "Content-type" : "application/json"
             } ,
             body: JSON.stringify({
-                "name": "Abhiral",
-                "password": "randompwd_test"
+                name: name,
+                password: pwd
             })
 
         }) 
-        const send = await transfer.json();
-        console.log(send , "The backend msg")
+        const data = await transfer.json();
+        document.getElementById('hello').textContent = `Data is ${data.name}`
     } 
-    await sendData();
-    } catch (error) {
-        console.log(error)
-    }
+    sumbit()
+
+})
+
     
 </script>
+    
+</body>
+
+
+
 
 </html>

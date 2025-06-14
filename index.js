@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const PORT = 4000;
 const path = require("path");
+const cors = require('cors')
+
+app.use(cors())
 
 
 app.use(express.json())
@@ -11,9 +14,14 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/login", (req, res) => {
-    console.log(req.body);
-    res.render('index' , {name: "Ouput"})
+  res.render('index')
+    
 });
+
+app.post('/login' , (req ,res)=>{
+  const {name , pwd} = req.body;
+  console.log(name , pwd)
+})
 
 app.listen(PORT, (err) => {
   err ? console.log(err) : console.log("Listening on port", PORT);
