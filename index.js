@@ -15,6 +15,12 @@ app.get("/login", (req, res) => {
     res.render('index' , {name: "Ouput"})
 });
 
+app.post('/login' , (req , res)=>{
+  const {name , password} = req.body;
+
+     console.log(name , password);
+})
+
 app.get('/signup' , (req , res)=>{
   res.render('create')
   console.log("Create is getting loged")
