@@ -15,6 +15,11 @@ app.get("/login", (req, res) => {
     res.render('index' , {name: "Ouput"})
 });
 
+app.get('/signup' , (req , res)=>{
+  res.render('create')
+  console.log("Create is getting loged")
+})
+
 app.listen(PORT, (err) => {
   err ? console.log(err) : console.log("Listening on port", PORT);
 });
