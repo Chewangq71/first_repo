@@ -19,8 +19,9 @@ app.get("/login", (req, res) => {
 });
 
 app.post('/login' , (req ,res)=>{
-  const {name , pwd} = req.body;
-  console.log(name , pwd)
+  const {name , password} = req.body;
+  console.log(name , password);
+  console.log("HEllo")
 })
 
 app.listen(PORT, (err) => {

@@ -55,10 +55,10 @@
 
  <script>
 
-document.getElementById('veer').addEventListener('submit' , async(e)=>{
+const hello = document.getElementById('veer').addEventListener('submit' , async(e)=>{
    e.preventDefault()
    const name = e.target.nawa.value;
-   const pwd  = e.target.pwd.value;
+   const password  = e.target.password.value;
   
         const sumbit = async()=>{
         
@@ -76,10 +76,11 @@ document.getElementById('veer').addEventListener('submit' , async(e)=>{
         const data = await transfer.json();
         document.getElementById('hello').textContent = `Data is ${data.name}`
     } 
-    sumbit()
+  return  sumbit()
 
 })
 
+hello();
     
 </script>
     
