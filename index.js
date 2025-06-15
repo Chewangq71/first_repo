@@ -65,18 +65,23 @@ app.post("/login", async(req, res) => {
        })
     }
 
-    if(name.length > 30 ||  name.length < 5 || password.length < 7 || password.length > 30  ){
-      console.log("Hello i got stuck in validation error block");  
-      return res.status(400).json({
-          success: false,
-          message: "Validation err",
-          minName_Length: 5,
-          maxName_Length: 30,
-          pwd_min_Length: 8,
-          pwd_max_Length: 30
 
-        })
-    }
+    //For the next dev working on this project ...here either sepreate this...length or just use above regex which is \n
+    //Combination of both checking it it is characters and checking min and max length
+
+
+    // if(name.length > 30 ||  name.length < 5 || password.length < 7 || password.length > 30  ){
+    //   console.log("Hello i got stuck in validation error block");  
+    //   return res.status(400).json({
+    //       success: false,
+    //       message: "Validation err",
+    //       minName_Length: 5,
+    //       maxName_Length: 30,
+    //       pwd_min_Length: 8,
+    //       pwd_max_Length: 30
+
+    //     })
+    // }
         const hashed_password = await argon2.hash(password);
     if(!hashed_password){
      throw new Error("Password could not be hashed! ")
@@ -125,6 +130,3 @@ app.listen(PORT, (err) => {
 
 //DataSource -> { connection data} =new ...now connected ....user Schema....export DataSource(the given repo) -> 
 
-//for(int i = 0; int i < 100; i++){
-// console.log(HELLO WORLD)
-//}

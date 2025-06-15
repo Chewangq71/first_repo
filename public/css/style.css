@@ -22,6 +22,7 @@ width: 40vw;
 border: 2px solid black;
 border-radius: 30px;
 box-shadow: 0 0 8px white,0 0 8px grey inset;
+
 margin: auto;
 margin-top: 100px;
 text-align: center;
@@ -32,38 +33,40 @@ animation-timing-function: linear;
 animation-direction: alternate;
 }
 @keyframes rotate{
- 
+
+ 0%{
+    border-color: rgb(247, 219, 184);
+    box-shadow: 10 10 black;
+    scale: 1;
+ }
+
+ 25%{
+
+    border-color: rgb(247, 219, 184);
+    box-shadow: 10 10 black;
+    border-radius: 50%;
+    scale: 1;
+ }
+
    50%{
     transform: rotate(0);
     border-color: bisque;
     box-shadow: 10 10 black;
     scale: 1;
    }
-   60%{
-    border-color: bisque;
-    box-shadow: 10 10 black;
-    scale: 1;
-   }
-   70%{
-    border-color: bisque;
-    box-shadow: 10 10 black;
-    scale: 1;
-   }
-   80%{
-    border-color: rgb(247, 219, 184);
-    box-shadow: 10 10 black;
-    scale: 1;
-   }
+   
     90%{
-        transform: rotate(360deg);
-        border-radius: 50%;
+        border-color: rgb(223, 199, 168);
+        box-shadow: 10 10 black;
+        scale: 1;
     }
+
    100%{
-    transform: rotate(360deg);
-    border-color: rgb(216, 187, 152);
+    border-color: rgb(79, 75, 72);
     box-shadow: 10 10 black;
     scale: 1;
    }
+
 }
 
 
