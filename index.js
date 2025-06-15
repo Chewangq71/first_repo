@@ -24,7 +24,6 @@ app.post("/login", (req, res) => {
 
 app.get("/signup", (req, res) => {
   res.render("create");
-  console.log("Create is getting loged");
 });
 
 app.listen(PORT, (err) => {

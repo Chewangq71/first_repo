@@ -1,7 +1,23 @@
-body{
-    background-color: black;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1{
-    color:white;
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-image: url("https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?cs=srgb&dl=pexels-sohi-807598.jpg&fm=jpg");
+backdrop-filter: blur(15px) ;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.parent{
+    width: 40vw;
+    height: 80vh;
+    background-image:url("https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?cs=srgb&dl=pexels-sohi-807598.jpg&fm=jpg");
+    color: white;
 }
